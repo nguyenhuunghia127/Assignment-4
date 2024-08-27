@@ -7,7 +7,7 @@ public class homework {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int points = 0;
+        int point = 0;
         int in = 0;
         while(in<3){
             int num = random.nextInt(4) + 2;
@@ -22,18 +22,18 @@ public class homework {
             System.out.print(" = ");
             int user = scanner.nextInt();
             int Answer = 0;
-            for (int addend : add) {
-                Answer += addend;
+            for (int i = 0; i < add.length; i++) {
+            Answer += add[i];
             }
             if (user == Answer) {
                 System.out.println("Correct!");
                 points++;
             } else {
-                System.out.println("Wrong! The answer was " +Answer);
+                System.out.println("Wrong!answer " +Answer);
                 in++;
             }
         }
 
-        System.out.println("You earned " + points + " total points.");
+        System.out.println("You earned " + point + " total points.");
     }
 }
